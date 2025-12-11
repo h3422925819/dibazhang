@@ -1,0 +1,251 @@
+{
+  "metadata": {
+    "title": "人口统计数据集",
+    "description": "不同年份的人口年龄和性别分布数据",
+    "source": "国家统计局",
+    "last_updated": "2025-12-08",
+    "units": "万人"
+  },
+  "years": {
+    "2020": {
+      "description": "2020年人口普查数据",
+      "total_population": 141178,
+      "age_groups": [
+        {
+          "range": "0-9",
+          "male": 7890,
+          "female": 7245
+        },
+        {
+          "range": "10-19",
+          "male": 7234,
+          "female": 6891
+        },
+        {
+          "range": "20-29",
+          "male": 8456,
+          "female": 8234
+        },
+        {
+          "range": "30-39",
+          "male": 9876,
+          "female": 9543
+        },
+        {
+          "range": "40-49",
+          "male": 10234,
+          female: 9876
+        },
+        {
+          "range": "50-59",
+          "male": 8765,
+          "female": 8432
+        },
+        {
+          "range": "60-69",
+          "male": 6543,
+          "female": 6234
+        },
+        {
+          "range": "70-79",
+          "male": 4321,
+          "female": 3987
+        },
+        {
+          "range": "80+",
+          "male": 2109,
+          "female": 1876
+        }
+      ]
+    },
+    "2021": {
+      "description": "2021年人口抽样调查数据",
+      "total_population": 141260,
+      "age_groups": [
+        {
+          "range": "0-9",
+          "male": 7821,
+          "female": 7189
+        },
+        {
+          "range": "10-19",
+          "male": 7156,
+          "female": 6823
+        },
+        {
+          "range": "20-29",
+          "male": 8398,
+          "female": 8176
+        },
+        {
+          "range": "30-39",
+          "male": 9809,
+          "female": 9487
+        },
+        {
+          "range": "40-49",
+          "male": 10156,
+          "female": 9798
+        },
+        {
+          "range": "50-59",
+          "male": 8698,
+          "female": 8365
+        },
+        {
+          "range": "60-69",
+          "male": 6487,
+          "female": 6189
+        },
+        {
+          "range": "70-79",
+          "male": 4289,
+          "female": 3965
+        },
+        {
+          "range": "80+",
+          "male": 2087,
+          "female": 1854
+        }
+      ]
+    },
+    "2022": {
+      "description": "2022年人口统计数据",
+      "total_population": 141226,
+      "age_groups": [
+        {
+          "range": "0-9",
+          "male": 7752,
+          "female": 7133
+        },
+        {
+          "range": "10-19",
+          "male": 7078,
+          "female": 6755
+        },
+        {
+          "range": "20-29",
+          "male": 8340,
+          "female": 8118
+        },
+        {
+          "range": "30-39",
+          "male": 9742,
+          "female": 9431
+        },
+        {
+          "range": "40-49",
+          "male": 10078,
+          "female": 9720
+        },
+        {
+          "range": "50-59",
+          "male": 8631,
+          "female": 8298
+        },
+        {
+          "range": "60-69",
+          "male": 6431,
+          "female": 6144
+        },
+        {
+          "range": "70-79",
+          "male": 4257,
+          "female": 3943
+        },
+        {
+          "range": "80+",
+          "male": 2065,
+          "female": 1832
+        }
+      ]
+    },
+    "2030": {
+      "description": "2030年人口预测数据",
+      "total_population": 142000,
+      "age_groups": [
+        {
+          "range": "0-9",
+          "male": 7200,
+          "female": 6800
+        },
+        {
+          "range": "10-19",
+          "male": 6900,
+          "female": 6600
+        },
+        {
+          "range": "20-29",
+          "male": 8100,
+          "female": 7900
+        },
+        {
+          "range": "30-39",
+          "male": 9500,
+          "female": 9200
+        },
+        {
+          "range": "40-49",
+          "male": 10500,
+          "female": 10200
+        },
+        {
+          "range": "50-59",
+          "male": 9800,
+          "female": 9500
+        },
+        {
+          "range": "60-69",
+          "male": 7600,
+          "female": 7300
+        },
+        {
+          "range": "70-79",
+          "male": 5200,
+          "female": 4900
+        },
+        {
+          "range": "80+",
+          "male": 3200,
+          "female": 3000
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "gender_ratio": {
+      "2020": 105.1,
+      "2021": 104.9,
+      "2022": 104.7,
+      "2030": 105.8
+    },
+    "aging_rate": {
+      "2020": 18.7,
+      "2021": 19.2,
+      "2022": 19.8,
+      "2030": 25.3
+    },
+    "median_age": {
+      "2020": 38.8,
+      "2021": 39.2,
+      "2022": 39.6,
+      "2030": 42.5
+    }
+  },
+  "regional_data": {
+    "urban_rural": {
+      "2020": {
+        "urban": 90199,
+        "rural": 50979
+      },
+      "2021": {
+        "urban": 91425,
+        "rural": 49835
+      },
+      "2022": {
+        "urban": 92063,
+        "rural": 49163
+      }
+    }
+  }
+}

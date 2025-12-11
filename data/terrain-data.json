@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "title": "地形高度数据集",
+    "description": "用于等高线图的地形高度测量数据",
+    "units": "米",
+    "resolution": "100x100",
+    "generated": "2025-12-08"
+  },
+  "terrain_types": [
+    {
+      "name": "mountain_peak",
+      "equation": "z = 1000 * exp(-((x-2)^2 + (y-2)^2)/2) * cos(sqrt(x^2 + y^2))",
+      "description": "山地地形"
+    },
+    {
+      "name": "valley",
+      "equation": "z = -500 * exp(-((x+1)^2 + y^2)/3)",
+      "description": "山谷地形"
+    },
+    {
+      "name": "plateau",
+      "equation": "z = 200 * tanh(sqrt(x^2 + y^2) - 1)",
+      "description": "高原地形"
+    },
+    {
+      "name": "ridge",
+      "equation": "z = 300 * exp(-y^2/4) * sin(x * 2)",
+      "description": "山脊地形"
+    }
+  ],
+  "sample_data": {
+    "grid_points": 10000,
+    "x_range": [-5, 5],
+    "y_range": [-5, 5],
+    "height_range": [-1000, 1500],
+    "color_scheme": "terrain_gradient",
+    "contour_levels": 20
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "metadata": {
+    "title": "项目甘特图数据",
+    "description": "软件开发项目的时间规划和进度跟踪",
+    "project_name": "电商平台开发",
+    "start_date": "2025-01-01",
+    "end_date": "2025-07-15",
+    "total_duration": 195
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "name": "需求分析",
+      "phase": "planning",
+      "start_day": 0,
+      "duration": 15,
+      "progress": 100,
+      "assigned_to": "产品团队",
+      "dependencies": [],
+      "priority": "high",
+      "description": "收集和分析用户需求"
+    },
+    {
+      "id": 2,
+      "name": "系统架构设计",
+      "phase": "design",
+      "start_day": 12,
+      "duration": 20,
+      "progress": 90,
+      "assigned_to": "架构团队",
+      "dependencies": [1],
+      "priority": "high",
+      "description": "设计系统整体架构和技术选型"
+    },
+    {
+      "id": 3,
+      "name": "UI/UX设计",
+      "phase": "design",
+      "start_day": 15,
+      "duration": 25,
+      "progress": 85,
+      "assigned_to": "设计团队",
+      "dependencies": [1],
+      "priority": "medium",
+      "description": "用户界面和用户体验设计"
+    },
+    {
+      "id": 4,
+      "name": "数据库设计",
+      "phase": "development",
+      "start_day": 25,
+      "duration": 15,
+      "progress": 80,
+      "assigned_to": "后端团队",
+      "dependencies": [2],
+      "priority": "high",
+      "description": "数据库模型设计和优化"
+    },
+    {
+      "id": 5,
+      "name": "前端开发",
+      "phase": "development",
+      "start_day": 35,
+      "duration": 45,
+      "progress": 60,
+      "assigned_to": "前端团队",
+      "dependencies": [3],
+      "priority": "high",
+      "description": "用户界面功能开发"
+    },
+    {
+      "id": 6,
+      "name": "后端API开发",
+      "phase": "development",
+      "start_day": 40,
+      "duration": 50,
+      "progress": 55,
+      "assigned_to": "后端团队",
+      "dependencies": [4],
+      "priority": "high",
+      "description": "API接口开发和业务逻辑实现"
+    },
+    {
+      "id": 7,
+      "name": "集成测试",
+      "phase": "testing",
+      "start_day": 75,
+      "duration": 30,
+      "progress": 25,
+      "assigned_to": "测试团队",
+      "dependencies": [5, 6],
+      "priority": "medium",
+      "description": "系统集成和端到端测试"
+    },
+    {
+      "id": 8,
+      "name": "性能优化",
+      "phase": "optimization",
+      "start_day": 90,
+      "duration": 20,
+      "progress": 10,
+      "assigned_to": "全栈团队",
+      "dependencies": [7],
+      "priority": "medium",
+      "description": "系统性能调优和优化"
+    },
+    {
+      "id": 9,
+      "name": "部署准备",
+      "phase": "deployment",
+      "start_day": 105,
+      "duration": 15,
+      "progress": 0,
+      "assigned_to": "运维团队",
+      "dependencies": [8],
+      "priority": "high",
+      "description": "生产环境准备和配置"
+    },
+    {
+      "id": 10,
+      "name": "用户培训",
+      "phase": "deployment",
+      "start_day": 110,
+      "duration": 25,
+      "progress": 0,
+      "assigned_to": "产品团队",
+      "dependencies": [9],
+      "priority": "low",
+      "description": "用户培训和文档编写"
+    },
+    {
+      "id": 11,
+      "name": "正式上线",
+      "phase": "deployment",
+      "start_day": 120,
+      "duration": 5,
+      "progress": 0,
+      "assigned_to": "运维团队",
+      "dependencies": [9, 10],
+      "priority": "high",
+      "description": "系统正式发布上线"
+    },
+    {
+      "id": 12,
+      "name": "维护支持",
+      "phase": "maintenance",
+      "start_day": 125,
+      "duration": 70,
+      "progress": 0,
+      "assigned_to": "全栈团队",
+      "dependencies": [11],
+      "priority": "medium",
+      "description": "上线后的维护和技术支持"
+    }
+  ],
+  "phases": [
+    {
+      "name": "planning",
+      "title": "规划阶段",
+      "color": "#3498db",
+      "duration": 25
+    },
+    {
+      "name": "design",
+      "title": "设计阶段", 
+      "color": "#9b59b6",
+      "duration": 35
+    },
+    {
+      "name": "development",
+      "title": "开发阶段",
+      "color": "#2ecc71",
+      "duration": 65
+    },
+    {
+      "name": "testing",
+      "title": "测试阶段",
+      "color": "#f39c12",
+      "duration": 30
+    },
+    {
+      "name": "optimization",
+      "title": "优化阶段",
+      "color": "#e67e22",
+      "duration": 20
+    },
+    {
+      "name": "deployment",
+      "title": "部署阶段",
+      "color": "#e74c3c",
+      "duration": 35
+    },
+    {
+      "name": "maintenance",
+      "title": "维护阶段",
+      "color": "#95a5a6",
+      "duration": 70
+    }
+  ],
+  "milestones": [
+    {
+      "name": "需求确认",
+      "day": 15,
+      "description": "需求文档确认完成"
+    },
+    {
+      "name": "设计评审",
+      "day": 40,
+      "description": "设计方案评审通过"
+    },
+    {
+      "name": "开发完成",
+      "day": 90,
+      "description": "主要功能开发完成"
+    },
+    {
+      "name": "测试通过",
+      "day": 105,
+      "description": "所有测试用例通过"
+    },
+    {
+      "name": "正式上线",
+      "day": 125,
+      "description": "系统正式发布"
+    }
+  ]
+}
