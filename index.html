@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第8章 - 高级数据可视化技术</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入ECharts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- 引入D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- 引入ECharts GL用于3D可视化 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts-gl@2.0.9/dist/echarts-gl.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>第8章 高级数据可视化技术</h1>
+        <nav>
+            <ul>
+                <li><a href="#section-8-1">8.1 矢量场流线图</a></li>
+                <li><a href="#section-8-2">8.2 棉棒图</a></li>
+                <li><a href="#section-8-3">8.3 哑铃图</a></li>
+                <li><a href="#section-8-4">8.4 甘特图</a></li>
+                <li><a href="#section-8-5">8.5 人口金字塔图</a></li>
+                <li><a href="#section-8-6">8.6 漏斗图</a></li>
+                <li><a href="#section-8-7">8.7 桑基图</a></li>
+                <li><a href="#section-8-8">8.8 树状图</a></li>
+                <li><a href="#section-8-9">8.9 华夫饼图</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 8.1 矢量场流线图 -->
+        <section id="section-8-1">
+            <h2>8.1 绘制矢量场流线图</h2>
+            <div class="chart-container">
+                <div id="vector-field-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>矢量场流线图</h3>
+                    <p>展示流体运动、磁场分布、风速方向等矢量场数据</p>
+                    <div class="controls">
+                        <button id="vector-btn1">切换流场类型</button>
+                        <button id="vector-btn2">调整密度</button>
+                        <button id="vector-btn3">显示箭头</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.2 棉棒图 -->
+        <section id="section-8-2">
+            <h2>8.2 绘制棉棒图</h2>
+            <div class="chart-container">
+                <div id="lollipop-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>棉棒图应用</h3>
+                    <p>结合点图和线图的优点，突出显示数据点的具体值</p>
+                    <div class="controls">
+                        <button id="lollipop-btn1">横向/纵向</button>
+                        <button id="lollipop-btn2">改变样式</button>
+                        <button id="lollipop-btn3">添加数据标签</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.3 哑铃图 -->
+        <section id="section-8-3">
+            <h2>8.3 绘制哑铃图</h2>
+            <div class="chart-container">
+                <div id="dumbbell-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>哑铃图应用</h3>
+                    <p>展示两组数据之间的变化或对比关系</p>
+                    <div class="controls">
+                        <button id="dumbbell-btn1">切换数据集</button>
+                        <button id="dumbbell-btn2">改变颜色</button>
+                        <button id="dumbbell-btn3">显示差值</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.4 甘特图 -->
+        <section id="section-8-4">
+            <h2>8.4 绘制甘特图</h2>
+            <div class="chart-container">
+                <div id="gantt-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>甘特图项目管理</h3>
+                    <p>展示项目进度、任务时间线和依赖关系</p>
+                    <div class="controls">
+                        <button id="gantt-btn1">添加任务</button>
+                        <button id="gantt-btn2">显示进度</button>
+                        <button id="gantt-btn3">时间筛选</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.5 人口金字塔图 -->
+        <section id="section-8-5">
+            <h2>8.5 绘制人口金字塔图</h2>
+            <div class="chart-container">
+                <div id="population-pyramid-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>人口金字塔分析</h3>
+                    <p>展示人口年龄结构、性别分布等人口统计特征</p>
+                    <div class="controls">
+                        <button id="pyramid-btn1">切换年份</button>
+                        <button id="pyramid-btn2">显示百分比</button>
+                        <button id="pyramid-btn3">添加预测</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.6 漏斗图 -->
+        <section id="section-8-6">
+            <h2>8.6 绘制漏斗图</h2>
+            <div class="chart-container">
+                <div id="funnel-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>漏斗图转化分析</h3>
+                    <p>展示销售漏斗、用户转化流程、筛选过程等分层数据</p>
+                    <div class="controls">
+                        <button id="funnel-btn1">切换数据集</button>
+                        <button id="funnel-btn2">改变样式</button>
+                        <button id="funnel-btn3">显示标签</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.7 桑基图 -->
+        <section id="section-8-7">
+            <h2>8.7 绘制桑基图</h2>
+            <div class="chart-container">
+                <div id="sankey-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>桑基图流向分析</h3>
+                    <p>展示流量、能量流动、资金流向等有向流数据</p>
+                    <div class="controls">
+                        <button id="sankey-btn1">切换数据</button>
+                        <button id="sankey-btn2">调整布局</button>
+                        <button id="sankey-btn3">显示标签</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.8 树状图 -->
+        <section id="section-8-8">
+            <h2>8.8 绘制树状图</h2>
+            <div class="chart-container">
+                <div id="treemap-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>树状图层次结构</h3>
+                    <p>展示层级数据、文件系统、组织结构等树形数据</p>
+                    <div class="controls">
+                        <button id="treemap-btn1">切换数据集</button>
+                        <button id="treemap-btn2">改变布局</button>
+                        <button id="treemap-btn3">显示数值</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8.9 华夫饼图 -->
+        <section id="section-8-9">
+            <h2>8.9 绘制华夫饼图</h2>
+            <div class="chart-container">
+                <div id="waffle-chart" class="chart"></div>
+                <div class="chart-info">
+                    <h3>华夫饼图占比分析</h3>
+                    <p>以网格形式展示数据占比，适合展示百分比构成</p>
+                    <div class="controls">
+                        <button id="waffle-btn1">切换数据集</button>
+                        <button id="waffle-btn2">改变尺寸</button>
+                        <button id="waffle-btn3">切换样式</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 第8章高级数据可视化技术演示</p>
+        <p>基于ECharts和D3.js实现</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
